@@ -5,6 +5,9 @@
    ======================================================================== */
 
 // Core Values Component
+
+$title = "About Us | Pangasinan State University";
+
 $coreItemsHtml = '';
 foreach ($coreValuesData['items'] as $value) {
     $parts = explode(' – ', $value);
@@ -80,18 +83,36 @@ HTML;
 </head>
 <body style="margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f4;">
 
-    <header style="background-color: #ffffff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #ffcc00; position: sticky; top: 0; z-index: 1000;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <img src="/assets/images/psu-logo.png" alt="psu logo" style="width: 50px; height: 50px;">
-            <h1 style="margin: 0; font-size: 24px; color: #003366; text-transform: uppercase;">Pangasinan State University</h1>
-        </div>
-        <nav>
-            <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
-                <li style="margin-left: 25px;"><a href="/" style="text-decoration: none; color: #6d6d6d; font-weight: 600;">Home</a></li>
-                <li style="margin-left: 25px;"><a href="/about" style="text-decoration: none; color: #003366; font-weight: 700;">About</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div style="background-color: #003366; color: white; padding: 10px 50px; display: flex; justify-content: space-between; align-items: center; font-size: 14px;"> 
+        <span>Announcements: Enrollment for Second Semester is now open!</span> 
+            <div> 
+                <a href="/portal" style="color: white; text-decoration: none; margin-left: 15px;">Student Portal</a> 
+                <a href="#" style="color: white; text-decoration: none; margin-left: 15px;">Library</a> 
+            </div> 
+        </div> 
+        
+        <header style="background-color: #ffffff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid #ffcc00; position: sticky; top: 0; z-index: 1000;"> 
+            <div style="display: flex; align-items: center; gap: 10px;"> 
+                <img src="/assets/images/psu-logo.png" alt="psu logo" style="width: 50px; height: 50px;"> 
+                <h1 style="margin: 0; font-size: 24px; color: #003366; text-transform: uppercase; letter-spacing: 1px;">Pangasinan State University</h1> 
+            </div> 
+            <nav> 
+                <ul style="list-style: none; display: flex; margin: 0; padding: 0;"> 
+                    <li style="margin-left: 25px;">
+                        <a href="/" style="text-decoration: none; color: #6d6d6d; font-weight: 600;">Home</a>
+                    </li> 
+                    <li style="margin-left: 25px;">
+                        <a href="/about" style="text-decoration: none; color: #003366; font-weight: 700;">About</a>
+                    </li> <li style="margin-left: 25px;">
+                        <a href="#" style="text-decoration: none; color: #6d6d6d; font-weight: 600;">Academics</a>
+                    </li> 
+                    <li style="margin-left: 25px;">
+                        <a href="#" style="text-decoration: none; color: #6d6d6d; font-weight: 600;">Admission</a>
+                    </li> 
+                </ul> 
+            </nav> 
+        </header>
+    </div>
 
     <main style="padding-bottom: 80px;">
         <section style="background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url('/assets/images/psu-banner.jpg'); background-size: cover; background-position: center; padding: 70px 50px; text-align: center; color: white;">
@@ -112,7 +133,7 @@ HTML;
         </div>
 
         <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center;">
-            <h2 style="color: #003366; text-transform: uppercase;">{$policyData['title']}</h2>
+            <h2 style="color: #003366; text-transform: uppercase;"><?= $policyData['title']?></h2>
             <div style="display: flex; flex-direction: column; gap: 20px; text-align: left; margin-top: 30px;">
                 <?= $policyItemsHtml ?>
             </div>
